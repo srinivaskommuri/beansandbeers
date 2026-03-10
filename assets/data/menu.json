@@ -1,0 +1,32 @@
+[
+  {
+    "image": "assets/images/beers.jpg",
+    "name": "Espresso",
+    "price": "$2.50"
+  },
+  {
+    "image": "assets/images/beers.jpg",
+    "name": "Cappuccino",
+    "price": "$3.50"
+  },
+  {
+    "image": "assets/images/beers.jpg",
+    "name": "Latte",
+    "price": "$4.00"
+  },
+  {
+    "image": "assets/images/beers.jpg",
+    "name": "Vegan Salad",
+    "price": "$7.50"
+  },
+  {
+    "image": "assets/images/beers.jpg",
+    "name": "Grilled Sandwich",
+    "price": "$5.00"
+  },
+  {
+    "image": "assets/images/beers.jpg",
+    "name": "Chocolate Cake",
+    "price": "$6.00"
+  }
+]

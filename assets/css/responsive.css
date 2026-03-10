@@ -1857,11 +1857,11 @@
     height: 17px;
   }
   .contact-card {
-    padding: 40px 35px 40px;
+    padding: 35px 15px 35px;
   }
   .contact-card .contact-icon {
-    width: 99px;
-    height: 99px;
+    width: 60px;
+    height: 60px;
   }
   .contact-card .contact-info {
     width: calc(100% - 132px);
