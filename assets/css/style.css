@@ -1639,7 +1639,8 @@ select {
 }
 
 .about-wrap.style-two {
-  background-color: #9F4920;
+  /* background-color: #9F4920; */
+  background-color: #77402e;
 }
 
 .about-wrap.style-two .about-shape {
@@ -5192,6 +5193,78 @@ input:checked+.slider:before {
 /*# sourceMappingURL=style.css.map */
 
 
-.navbar-brand img, .logo img{
+.navbar-brand img, .logo img {
   width: 100px;
+}
+
+.colorOverlay {
+  background: rgba(0, 50, 160, 0.5), rgba(0, 50, 160, 0.5), rgba(0, 50, 160, 0.5);
+  position: relative;
+}
+
+/* #video-background {
+  position: fixed;
+  top: 0%;
+  left: 0%;
+  z-index: -4;
+  width: auto;
+  min-width: 100%;
+  height: auto;
+  min-height: 100%;
+  margin: 0 !important;
+  background-size: cover;
+  transition: 0.4s ease-out;
+} */
+
+.headerText {
+  /* position: absolute;
+  bottom: 45%; */
+  width: 100%;
+  font-size: 3.6rem;
+  letter-spacing: 2px;
+  color: #fff;
+  font-family: Oswald, sans-serif;
+  text-shadow: 1px 1px 1px #16a085, 1px 1px 4px #2980b9;
+  text-align: center;
+  line-height: 1;
+  margin-top: 15%;
+}
+
+.headerText-info {
+  /* position: absolute;
+  bottom: 38%; */
+  width: 100%;
+  font-size: 1.5rem;
+  letter-spacing: 2px;
+  color: #fff;
+  /* font-family: Oswald, sans-serif;
+  text-shadow: 1px 1px 1px #16a085, 1px 1px 4px #2980b9; */
+  text-align: center;
+  justify-content: center;
+}
+
+.main-bg-video {
+  padding: 0;
+  /* make video cover full container and scale responsively */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  z-index: -1;
+  /* send behind other content if needed */
+}
+
+/* .why-choose-us-wrap{
+  background: rgba(0, 50, 160, 0.5);
+} */
+
+/* make the video container fill the screen and act as a positioning context */
+.container-fluid.colorOverlay {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+  content: "";
+  background: rgba(0, 0, 0, 0.4);
 }

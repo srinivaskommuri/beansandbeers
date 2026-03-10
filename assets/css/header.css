@@ -291,7 +291,8 @@
   border-bottom: none;
 }
 .navbar-area.style-two .navbar-top {
-  background-color: #9F4920;
+  /* background-color: #9F4920; */
+  background-color: #77402e;
 }
 .navbar-area.style-two .navbar-top .social-profile li a i {
   color: var(--whiteColor);

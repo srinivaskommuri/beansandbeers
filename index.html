@@ -30,13 +30,6 @@
     </div>
     <!--  Preloader End -->
 
-    <div class="switch-theme-mode">
-        <label class="switch">
-            <input type="checkbox" onchange="toggleTheme()" class="slider-btn">
-            <span class="slider round"></span>
-        </label>
-    </div>
-
     <!-- Navbar Area Start -->
     <div class="navbar-area style-two position-relative top-0 start-0 w-100" id="navbar">
         <div class="navbar-top border-0 bg-mild">
@@ -79,8 +72,8 @@
                     </div>
                     <div class="collapse navbar-collapse">
                         <ul class="navbar-nav mx-auto">
-                            <li class="nav-item">
-                                <a href="index.html" class="nav-link">
+                            <li class="nav-item active">
+                                <a href="index.html" class="nav-link active">
                                     Home
                                 </a>
                             </li>
@@ -90,10 +83,36 @@
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="" class="nav-link">
+                                <a href="javascript:void(0)" class="dropdown-toggle nav-link" bis_skin_checked="1">
+                                    Menu
+                                </a>
+                                <ul class="dropdown-menu list-unstyle">
+                                    <li class="nav-item">
+                                        <a href="" class="nav-link" bis_skin_checked="1">Breakfast </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="" class="nav-link" bis_skin_checked="1">Vegan Menu</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="" class="nav-link" bis_skin_checked="1">Lunch & Dinner </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="" class="nav-link" bis_skin_checked="1">Kids Menu </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="" class="nav-link" bis_skin_checked="1">Sides </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="" class="nav-link" bis_skin_checked="1">Cocktails </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a href="book-a-date-night.html" class="nav-link">
                                     Book a Date Night
                                 </a>
                             </li>
+
                             <li class="nav-item">
                                 <a href="" class="nav-link">
                                     Functions
@@ -126,10 +145,20 @@
         <div class="offcanvas-body">
             <ul class="responsive-menu">
                 <li><a href="index.html">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Book a Date Night</a></li>
+                <li><a href="about.html">About</a></li>
+                <li class="responsive-menu-list"><a href="javascript:void(0);">Menu</a>
+                    <ul class="responsive-menu-items">
+                        <li><a href="">Breakfast</a></li>
+                        <li><a href="">Vegan Menu</a></li>
+                        <li><a href="">Lunch & Dinner</a></li>
+                        <li><a href="">Kids Menu</a></li>
+                        <li><a href="">Sides</a></li>
+                        <li><a href="">Cocktails</a></li>
+                    </ul>
+                </li>
+                <li><a href="book-a-date-night.html">Book a Date Night</a></li>
                 <li><a href="#">Functions</a></li>
-                <li><a href="#">Contact us</a></li>
+                <li><a href="contact-us.html">Contact us</a></li>
             </ul>
             <div class="option-item">
                 <ul class="social-profile style-one list-unstyle">
@@ -170,7 +199,7 @@
     <!-- End Search Modal -->
 
     <!-- Hero Section Start -->
-    <div class="hero-section style-two position-relative ptb-120 bg-mimos">
+    <!-- <div class="hero-section style-two position-relative ptb-120 bg-mimos">
         <img src="assets/images/home/hero-left.png" alt="Image" class="hero-shape-one position-absolute bounce">
         <img src="assets/images/home/hero-right.png" alt="Image" class="hero-shape-two position-absolute end-0 bounce">
         <div class="container">
@@ -182,11 +211,24 @@
                 </div>
             </div>
         </div>
+    </div> -->
+    <div class="container-fluid colorOverlay pb-10">
+        <div class="row">
+            <div class="col-md-12">
+                <h1 class="headerText">Welcome to Beans & Beers Torquay</h1>
+                <h5 class="headerText-info">A coastal, family-friendly café and restaurant just minutes from the beach.</h5>
+            </div>
+            <video id="video-background" class="main-bg-video" autoplay loop muted
+                poster="//cdn2.editmysite.com/images/landing-pages/global/home/masthead/poster.jpg">
+                <source src="assets/images/videos/Beans-Beer.mp4" data-src="assets/images/videos/Beans-Beer.mp4"
+                    type="video/mp4">
+            </video>
+        </div>
     </div>
     <!-- Hero Section End -->
 
     <!-- Feature Section Start -->
-    <div class="bg-mimos pb-100">
+    <div class="bg-mimos pb-100 pt-5">
         <div class="container">
             <div class="feature-card-wrap style-two d-flex flex-wrap justify-content-center">
                 <div class="feature-card position-relative d-flex flex-wrap align-items-center mb-30"
@@ -481,7 +523,7 @@
         <div class="section-bg-shape position-absolute top-0"></div>
         <div class="container">
             <div class="row mb-30">
-                <div class="col-md-8" data-cue="slideInUp">
+                <!-- <div class="col-md-8" data-cue="slideInUp">
                     <h2 class="section-title">Meet Our Team</h2>
                 </div>
                 <div class="col-md-4 mt-sm-20" data-cue="slideInUp">
@@ -495,9 +537,12 @@
                             <i class="ri-arrow-right-s-line"></i>
                         </div>
                     </div>
-                </div>
+                </div> -->
+                <!-- Elfsight Instagram Feed | Untitled Instagram Feed -->
+                <script src="https://elfsightcdn.com/platform.js" async></script>
+                <div class="elfsight-app-7aef42e6-d945-4b05-b4d8-bbf932dc65eb" data-elfsight-app-lazy></div>
             </div>
-            <div class="team-slider swiper" data-cue="slideInUp">
+            <!-- <div class="team-slider swiper" data-cue="slideInUp">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
                         <div class="team-card">
@@ -572,7 +617,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> -->
         </div>
     </div>
     <!-- Team Section End -->
@@ -695,8 +740,7 @@
                     <div class="blog-card style-two mb-30 position-relative">
                         <div class="blog-img round-5 overflow-hidden">
                             <img src="assets/img/blog/blog-1.webp" alt="Image" class="round-5 transition">
-                            <a href="#"
-                                class="blog-date f-secondary text-center position-absolute top-0 transition">15
+                            <a href="#" class="blog-date f-secondary text-center position-absolute top-0 transition">15
                                 <br>Feb</a>
                         </div>
                         <!-- <ul class="blog-metainfo list-unstyle">
@@ -712,8 +756,7 @@
                     <div class="blog-card style-two mb-30 position-relative">
                         <div class="blog-img round-5 overflow-hidden">
                             <img src="assets/img/blog/blog-2.webp" alt="Image" class="round-5 transition">
-                            <a href="#"
-                                class="blog-date f-secondary text-center position-absolute top-0 transition">20
+                            <a href="#" class="blog-date f-secondary text-center position-absolute top-0 transition">20
                                 <br>Feb</a>
                         </div>
                         <!-- <ul class="blog-metainfo list-unstyle">
@@ -729,8 +772,7 @@
                     <div class="blog-card style-two mb-30 position-relative">
                         <div class="blog-img round-5 overflow-hidden">
                             <img src="assets/img/blog/blog-3.webp" alt="Image" class="round-5 transition">
-                            <a href="#"
-                                class="blog-date f-secondary text-center position-absolute top-0 transition">25
+                            <a href="#" class="blog-date f-secondary text-center position-absolute top-0 transition">25
                                 <br>Feb</a>
                         </div>
                         <!-- <ul class="blog-metainfo list-unstyle">
