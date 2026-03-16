@@ -5231,7 +5231,7 @@ input:checked+.slider:before {
   text-shadow: 1px 1px 1px #16a085, 1px 1px 4px #2980b9;
   text-align: center;
   line-height: 1;
-  margin-top: 15%;
+  margin-top: 25%;
 }
 
 .headerText-info {
@@ -5267,6 +5267,7 @@ input:checked+.slider:before {
 /* make the video container fill the screen and act as a positioning context */
 .container-fluid.colorOverlay {
   position: relative;
+  margin-top: -110px;
   height: 100vh;
   overflow: hidden;
   content: "";
