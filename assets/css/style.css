@@ -5372,3 +5372,7 @@ input:checked+.slider:before {
   }
 
 }
+
+.online-orders-wrap {
+  background: linear-gradient(to bottom, #fff5ed, #4cb2c4);
+}
