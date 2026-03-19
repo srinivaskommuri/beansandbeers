@@ -238,7 +238,7 @@
   position: absolute;
   bottom: 42px;
   right: 0px;
-  content: "\ea4c";
+  content: "\ea4d";
   font-size: 18px;
   font-weight: 300;
   line-height: 0.8;
@@ -422,7 +422,7 @@
 }
 
 .navbar-area.style-two.sticky, .navbar-area.style-three.sticky {
-  top: -50px !important;
+  top: 0px !important;
 }
 
 .navbar-area .navbar-top .social-profile li {

@@ -197,7 +197,11 @@ select {
 }
 
 .bg-mimos {
-  background-color: #FDF1D9;
+  background-color: #000;
+}
+
+.bg-mimos-home {
+  background-color: #FDF1D9;;
 }
 
 .bg-bunk {
