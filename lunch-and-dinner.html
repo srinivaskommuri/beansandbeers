@@ -23,28 +23,6 @@
 <body>
     <!-- Navbar Area Start -->
     <div class="navbar-area style-two position-relative top-0 start-0 w-100" id="navbar">
-        <!-- copy header structure from index.html -->
-        <!-- <div class="navbar-top border-0 bg-mild">
-            <div class="container">
-                <div class="row">
-                    <div class="col-xl-8 col-md-9 pe-md-0">
-                        <p class="fw-bold mb-0 text-white">Welcome To Beans and Beers Torquay. We Open Daily At 9:00 am
-                            And
-                            Close At 12:00 pm.</p>
-                    </div>
-                    <div class="col-xl-4 col-md-3">
-                        <ul class="social-profile list-unstyle text-md-end">
-                            <li><a href="https://www.facebook.com/people/Beans-and-Beers-Torquay/61581137000029/?ref=pl_edit_xav_ig_profile_page_web#"
-                                    target="_blank"><i class="ri-facebook-fill"></i></a>
-                            </li>
-                            <li><a href="https://www.instagram.com/beansandbeerstorquay/" target="_blank"><i
-                                        class="ri-instagram-line"></i></a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div> -->
         <div class="bg-mimos">
             <div class="container">
                 <nav class="navbar navbar-expand-lg d-flex justify-content-between align-items-center">
@@ -80,19 +58,20 @@
                                 </a>
                                 <ul class="dropdown-menu list-unstyle">
                                     <li class="nav-item">
-                                        <a href="" class="nav-link" bis_skin_checked="1">Breakfast </a>
+                                        <a href="breakfast.html" class="nav-link" bis_skin_checked="1">Breakfast </a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="" class="nav-link" bis_skin_checked="1">Vegan Menu</a>
+                                        <a href="vegan-menu.html" class="nav-link" bis_skin_checked="1">Vegan Menu</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="" class="nav-link" bis_skin_checked="1">Lunch & Dinner </a>
+                                        <a href="lunch-and-dinner.html" class="nav-link" bis_skin_checked="1">Lunch &
+                                            Dinner </a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="" class="nav-link" bis_skin_checked="1">Kids Menu </a>
+                                        <a href="kids-menu.html" class="nav-link" bis_skin_checked="1">Kids Menu </a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="" class="nav-link" bis_skin_checked="1">Sides </a>
+                                        <a href="sides.html" class="nav-link" bis_skin_checked="1">Sides </a>
                                     </li>
                                     <li class="nav-item">
                                         <a href="" class="nav-link" bis_skin_checked="1">Cocktails </a>
@@ -104,7 +83,6 @@
                                     Book a Date Night
                                 </a>
                             </li>
-
                             <li class="nav-item">
                                 <a href="" class="nav-link">
                                     Functions
@@ -122,13 +100,67 @@
         </div>
     </div>
 
-    <!-- Page Heading Section -->
-    <section class="py-5 bg-light text-center">
-        <div class="container">
-            <h1 class="display-4 fw-bold">Our Delicious Menu</h1>
-            <p class="lead">Browse through our selection and add your favourites to the cart.</p>
+    <!-- Start Responsive Navbar Area -->
+    <div class="responsive-navbar offcanvas offcanvas-end border-0" data-bs-backdrop="static" tabindex="-1"
+        id="navbarOffcanvas">
+        <div class="offcanvas-header">
+            <a href="index.html" class="logo d-inline-block">
+                <img src="assets/images/logo/logo.webp" alt="Image">
+            </a>
+            <button type="button" class="close-btn bg-transparent position-relative lh-1 p-0 border-0"
+                data-bs-dismiss="offcanvas" aria-label="Close">
+                <i class="ri-close-line"></i>
+            </button>
         </div>
-    </section>
+        <div class="offcanvas-body">
+            <ul class="responsive-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li class="responsive-menu-list"><a href="javascript:void(0);">Menu</a>
+                    <ul class="responsive-menu-items">
+                        <li><a href="breakfast.html">Breakfast</a></li>
+                        <li><a href="vegan-menu.html">Vegan Menu</a></li>
+                        <li><a href="lunch-and-dinner.html">Lunch & Dinner</a></li>
+                        <li><a href="kids-menu.html">Kids Menu</a></li>
+                        <li><a href="sides.html">Sides</a></li>
+                        <li><a href="">Cocktails</a></li>
+                    </ul>
+                </li>
+                <li><a href="book-a-date-night.html">Book a Date Night</a></li>
+                <li><a href="#">Functions</a></li>
+                <li><a href="contact-us.html">Contact us</a></li>
+            </ul>
+            <div class="option-item">
+                <ul class="social-profile style-one list-unstyle">
+                    <li><a href="https://www.facebook.com/people/Beans-and-Beers-Torquay/61581137000029/?ref=pl_edit_xav_ig_profile_page_web#"
+                            target="_blank"
+                            class="d-flex flex-column align-items-center justify-content-center rounded-circle position-relative overflow-hidden"><i
+                                class="ri-facebook-fill"></i></a></li>
+                    <li><a href="https://www.instagram.com/beansandbeerstorquay/" target="_blank"
+                            class="d-flex flex-column align-items-center justify-content-center rounded-circle position-relative overflow-hidden"><i
+                                class="ri-instagram-line"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Breadcrumb Section Start -->
+    <div class="breadcrumb-wrap bg-mild position-relative">
+        <img src="assets/img/breadcrumb/br-shape-1.webp" alt="Image"
+            class="br-shape-one position-absolute sm-none bounce">
+        <img src="assets/img/breadcrumb/br-shape-2.webp" alt="Image"
+            class="br-shape-two position-absolute sm-none moveHorizontal">
+        <img src="assets/img/breadcrumb/br-shape-3.webp" alt="Image"
+            class="br-shape-three position-absolute top-0 end-0 h-100">
+        <div class="container text-center ps-xxl-4">
+            <h2 class="br-title text-white">Our Lunch & Dinner Menu</h2>
+            <!-- <p class="lead text-white">Browse through our selection and add your favourites to the cart.</p> -->
+            <ul class="br-menu list-unstyle">
+                <li class="fs-xxl-20"><a href="index.html">Home</a></li>
+                <li class="fs-xxl-20">Our Lunch & Dinner Menu</li>
+            </ul>
+        </div>
+    </div>
 
     <!-- Menu Items Section -->
     <section class="py-5">

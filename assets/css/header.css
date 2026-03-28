@@ -342,7 +342,7 @@
 }
 
 .navbar-area.style-two {
-  border-bottom: 1px solid rgba(18, 19, 27, 0.18);
+  /* border-bottom: 1px solid rgba(18, 19, 27, 0.18); */
 }
 
 .navbar-area.style-two.style-two.sticky {

@@ -10,42 +10,9 @@ document.addEventListener('DOMContentLoaded', () => {
             console.log('Menu data loaded successfully', res);
             return res.json();
         })
-        .then((data) => {
-            const filteredData = data.filter(getCategoryFilter());
-            renderMenu(filteredData, container);
-        })
+        .then((data) => renderMenu(data, container))
         .catch((err) => console.error('Failed to load menu data:', err));
 });
-
-function getCategoryFilter() {
-    const path = window.location.pathname.toLowerCase();
-
-    if (path.includes('breakfast.html')) {
-        return item => item.product_category_id === 287360;
-    } else if (path.includes('vegan-menu.html')) {
-        const veganMenu = item => {
-            const isVeganCategory = item.product_category_id === 287361;
-            const isSpecificVeganItem = item.product_category_id === 284955 && item.id === 1481628;
-            return isVeganCategory || isSpecificVeganItem;
-        };
-        return veganMenu;
-    } else if (path.includes('lunch-and-dinner.html')) {
-        // Lunch and Dinner categories: BnB Mains, Burgers, Ribs, Salads
-        const categories = [284954, 284955, 287366, 287367];
-        return item => categories.includes(item.product_category_id);
-    } else if (path.includes('kids-menu.html')) {
-        // Kids Menu categories: BnB Mains, Burgers, Ribs, Salads
-        const categories = [287365, 284962];
-        return item => categories.includes(item.product_category_id);
-    } else if (path.includes('sides.html')) {
-        // Sides categories
-        const categories = [284965, 284959];
-        return item => categories.includes(item.product_category_id);
-    } else {
-        // Default: show all items if on other pages
-        return () => true;
-    }
-}
 
 function renderMenu(items, container) {
     console.log('Rendering menu items:', items);
@@ -59,7 +26,8 @@ function renderMenu(items, container) {
                 <div class="card-body d-flex flex-column">
                     <h5 class="card-title">${item.product_name}</h5>
                     <p class="card-text">${item.product_desc || ''}</p>
-                    <p class="card-text menu-price text-primary fw-bold mt-auto">${`$${item.price.toFixed(2)}`}</p>
+                    <p class="card-text text-primary fw-bold">${`$${item.price.toFixed(2)}`}</p>
+                    <button class="btn btn-primary mt-auto add-cart">Add to Cart</button>
                 </div>
             </div>
         `;
