@@ -184,6 +184,10 @@ select {
   background-color: #151B20;
 }
 
+.bg-mild-date {
+  background: linear-gradient(to bottom, #bfb6ae, #77402e)
+}
+
 .bg-one {
   background-color: #010101;
 }
@@ -196,7 +200,11 @@ select {
   background-color: #3B5454;
 }
 
-.bg-mimos {
+.bg-mimos-info {
+  background-color: #77402e;
+}
+
+.sticky .bg-mimos {
   background-color: #77402e;
 }
 
@@ -389,7 +397,7 @@ select {
   padding-bottom: 130px;
 }
 
-.ptb-100{
+.ptb-100 {
   padding-top: 100px;
   padding-bottom: 100px;
 }
@@ -1711,12 +1719,12 @@ select {
 }
 
 .about-wrap.style-two .about-bg {
-  background-image: url(../images/home/beach-view-bbers.webp);
+  background-image: url(../images/home/experience.jpeg);
   height: 920px;
 }
 
 .about-wrap.style-three .about-bg {
-  background-image: url(../img/about/about-img-4.webp);
+  background-image: url(../images/functions/2.jpeg);
   width: 100%;
   height: 100%;
   border-radius: 50px;
@@ -1740,7 +1748,7 @@ select {
   width: 50%;
   height: 100%;
   border-radius: 33px 0 0 33px;
-  background-color: #0E1317;
+  /* background-color: #0E1317; */
   z-index: -1;
 }
 
@@ -5291,6 +5299,14 @@ input:checked+.slider:before {
   content: "";
   background: rgba(0, 0, 0, 0.4);
 }
+.container-fluid.colorOverlayDateNight {
+  position: relative;
+  /* margin-top: -110px; */
+  height: 100vh;
+  overflow: hidden;
+  content: "";
+  background: rgba(0, 0, 0, 0.4);
+}
 
 
 
@@ -5396,8 +5412,30 @@ input:checked+.slider:before {
   background: linear-gradient(to bottom, #fff5ed, #4cb2c4);
 }
 
-.menu-price{
+.menu-price {
   font-size: 20px !important;
   color: #42b1c2 !important;
   font-weight: 500 !important;
+}
+
+.reserve-yout-table {
+  /* display: inline-block !important; */
+  padding: 8px 10px !important;
+  background-color: #d4893f !important;
+  color: white !important;
+  text-decoration: none !important;
+  border-radius: 5px !important;
+  font-weight: 500 !important;
+  transition: all 0.3s ease;
+  width: 230px !important;
+  height: 30px !important;
+  font-size: 16px !important;
+  margin: 0 auto !important;
+}
+.reserve-yout-table i {
+  display: none !important;
+}
+.reserve-yout-table span {
+  display: inline !important;
+  
 }

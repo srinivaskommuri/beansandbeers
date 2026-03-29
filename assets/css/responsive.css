@@ -1731,8 +1731,8 @@
     width: calc(100% - 55px);
   }
   .about-wrap.style-three .about-content {
-    width: calc(100% + 242px);
-    margin-left: -242px;
+    /* width: calc(100% + 242px);
+    margin-left: -242px; */
     padding-left: 78px;
     padding-bottom: 63px;
     margin-bottom: 0;
