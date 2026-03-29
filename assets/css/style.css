@@ -5299,6 +5299,7 @@ input:checked+.slider:before {
   content: "";
   background: rgba(0, 0, 0, 0.4);
 }
+
 .container-fluid.colorOverlayDateNight {
   position: relative;
   /* margin-top: -110px; */
@@ -5432,10 +5433,12 @@ input:checked+.slider:before {
   font-size: 16px !important;
   margin: 0 auto !important;
 }
+
 .reserve-yout-table i {
   display: none !important;
 }
+
 .reserve-yout-table span {
   display: inline !important;
-  
+
 }
