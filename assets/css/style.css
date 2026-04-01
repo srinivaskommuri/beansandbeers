@@ -11,6 +11,8 @@
 8.  Hero CSS
 ----------------------------------*/
 @import url("https://fonts.googleapis.com/css2?family=Bellota:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Protest+Riot&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 /* href="https://fonts.googleapis.com/css2?family=Bellota:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" */
 
 @font-face {
@@ -201,11 +203,12 @@ select {
 }
 
 .bg-mimos-info {
-  background-color: #77402e;
+  /* background-color: #77402e; */
+  background-color: #4cb2c4;
 }
 
 .sticky .bg-mimos {
-  background-color: #77402e;
+  background-color: #4cb2c4;
 }
 
 .bg-mimos-home {
@@ -1327,7 +1330,8 @@ select {
 -------------------------------*/
 .breadcrumb-wrap {
   padding: 105px 0 110px;
-  background-color: #77402e;
+  /* background-color: #77402e; */
+  background-color: #4cb2c4;
 }
 
 .breadcrumb-wrap .br-shape-one,
@@ -1666,7 +1670,7 @@ select {
 
 .about-wrap.style-two {
   /* background-color: #9F4920; */
-  background-color: #77402e;
+  background-color: #4cb2c4;
 }
 
 .about-wrap.style-two .about-shape {
@@ -5251,9 +5255,10 @@ input:checked+.slider:before {
   bottom: 45%; */
   width: 100%;
   font-size: 3.6rem;
+  font-family: "Protest Riot", sans-serif;
   letter-spacing: 2px;
   color: #fff;
-  font-family: Oswald, sans-serif;
+  /* font-family: Oswald, sans-serif; */
   text-shadow: 1px 1px 1px #16a085, 1px 1px 4px #2980b9;
   text-align: center;
   line-height: 1;
@@ -5267,8 +5272,8 @@ input:checked+.slider:before {
   font-size: 1.5rem;
   letter-spacing: 2px;
   color: #fff;
-  /* font-family: Oswald, sans-serif;
-  text-shadow: 1px 1px 1px #16a085, 1px 1px 4px #2980b9; */
+  font-family: "Poppins", sans-serif;
+  /* text-shadow: 1px 1px 1px #16a085, 1px 1px 4px #2980b9; */
   text-align: center;
   justify-content: center;
 }
@@ -5442,3 +5447,9 @@ input:checked+.slider:before {
   display: inline !important;
 
 }
+
+/* .eapps-instagram-feed > a {
+  display: none !important;
+  background-color: purple !important;
+
+} */

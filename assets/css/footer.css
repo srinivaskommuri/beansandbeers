@@ -17,7 +17,8 @@
   background-color: #0C0D12;
 }
 .footer-wrap.style-two {
-  background-color: #732701;
+  /* background-color: #732701; */
+  background-color: #4cb2c4;
 }
 .footer-wrap.style-two .footer-bottom {
   background-color: var(--whiteColor);

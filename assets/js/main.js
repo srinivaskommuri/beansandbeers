@@ -245,3 +245,42 @@ try {
 	})();
 
 } catch (err) {}
+
+// Adjust Instagram feed a elements
+function adjustInstagramLinks() {
+    // Show post links
+    document.querySelectorAll('.eapps-instagram-feed .eapps-instagram-feed-posts-item-link').forEach(function(a) {
+        a.style.setProperty('display', 'block', 'important');
+    });
+
+    // Hide watermark
+    document.querySelectorAll('.eapps-instagram-feed a[href*="elfsight.com"]').forEach(function(a) {
+        a.style.setProperty('display', 'none', 'important');
+    });
+
+    // Hide watermark
+    document.querySelectorAll('.es-widget-background-wrapper a[href*="elfsight.com"]').forEach(function(a) {
+        a.style.setProperty('display', 'none', 'important');
+    });
+
+
+}
+
+// Run immediately in case elements are already there
+adjustInstagramLinks();
+
+// Run after delays in case content loads later
+setTimeout(adjustInstagramLinks, 1000);
+setTimeout(adjustInstagramLinks, 2000);
+setTimeout(adjustInstagramLinks, 3000);
+
+// Use MutationObserver to watch for changes on the body
+const observer = new MutationObserver(function(mutations) {
+    mutations.forEach(function(mutation) {
+        if (mutation.type === 'childList') {
+            adjustInstagramLinks();
+        }
+    });
+});
+
+observer.observe(document.body, { childList: true, subtree: true });
