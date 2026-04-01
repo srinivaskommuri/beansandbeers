@@ -184,11 +184,15 @@
     <!-- Breadcrumb Section End -->
 
     <!-- About Section Start -->
-    <div class="about-wrap style-three bg-mild-date1 online-orders-wrap mb-5 ptb-130">
+    <div class="about-wrap style-three bg-mild-date1 online-orders-wrap ptb-130">
         <div class="container">
             <div class="row">
                 <div class="col-lg-6" data-cue="slideInUp">
-                    <div class="about-bg bg-f"></div>
+                    <!-- <div class="about-bg bg-f"></div> -->
+                    <video id="video-background" class="main-bg-video" autoplay loop muted>
+                        <source src="assets/images/videos/functions.mp4" data-src="assets/images/videos/functions.mp4"
+                            width="100%" height="100%" alt="Video" type="video/mp4">
+                    </video>
                 </div>
                 <div class="col-lg-6" data-cue="slideInUp">
                     <div class="about-content-wrap">
@@ -219,6 +223,132 @@
         </div>
     </div>
     <!-- About Section End -->
+
+    <!-- Booking Section Start -->
+    <div class="bg-mild ptb-130 position-relative" id="booking-section">
+        <div class="container">
+            <div class="row mb-50">
+                <div class="col-lg-8 mx-auto text-center">
+                    <h2 class="section-title text-white mb-30">Reserve Your Table</h2>
+                    <p class="fs-xxl-18 text-white mb-0">Choose your perfect date night experience. We'll take care
+                        of
+                        the rest.</p>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <form class="position-relative bg-dark1 p-40 rounded-3"
+                        style="border: 2px solid #d4893f; padding: 40px;">
+                        <div class="row mb-25">
+                            <div class="col-lg-6">
+                                <label class="text-white mb-10 d-block" style="font-weight: 500;">Your Name
+                                    *</label>
+                                <input type="text" class="form-control"
+                                    style="padding: 12px 15px; border-radius: 5px; border: 1px solid #444; color: rgb(0, 0, 0);"
+                                    placeholder="Enter your name" required>
+                            </div>
+                            <div class="col-lg-6">
+                                <label class="text-white mb-10 d-block" style="font-weight: 500;">Email Address
+                                    *</label>
+                                <input type="email" class="form-control"
+                                    style="padding: 12px 15px; border-radius: 5px; border: 1px solid #444;  color: rgb(0, 0, 0);"
+                                    placeholder="Enter your email" required>
+                            </div>
+                        </div>
+
+                        <div class="row mb-25">
+                            <div class="col-lg-12">
+                                <label class="text-white mb-10 d-block" style="font-weight: 500;">Phone Number
+                                    *</label>
+                                <input type="tel" class="form-control"
+                                    style="padding: 12px 15px; border-radius: 5px; border: 1px solid #444; color: rgb(0, 0, 0);"
+                                    placeholder="Enter your phone" required>
+                            </div>
+                            <!-- <div class="mb-25 col-lg-6">
+                                <label class="text-white mb-10 d-block" style="font-weight: 500;">Special Occasions
+                                    (Optional)</label>
+                                <textarea class="form-control" rows="3"
+                                    style="padding: 12px 15px; border-radius: 5px; border: 1px solid #444; color: rgb(0, 0, 0);"
+                                    placeholder="Anniversary, proposal, birthday, or any special details..."></textarea>
+                            </div> -->
+                            <!-- <div class="col-lg-6">
+                                <label class="text-white mb-10 d-block" style="font-weight: 500;">Number of Guests
+                                    *</label>
+                                <select class="form-control"
+                                    style="padding: 12px 15px; border-radius: 5px; border: 1px solid #444; color: rgb(0, 0, 0);"
+                                    required>
+                                    <option value="">Select number of guests</option>
+                                    <option value="2">2 Guests</option>
+                                    <option value="3">3 Guests</option>
+                                    <option value="4">4 Guests</option>
+                                    <option value="5">5 Guests</option>
+                                    <option value="6">6 Guests</option>
+                                    <option value="7">7+ Guests</option>
+                                </select>
+                            </div> -->
+                        </div>
+
+                        <!-- <div class="row mb-25">
+                            <div class="col-lg-6">
+                                <label class="text-white mb-10 d-block" style="font-weight: 500;">Preferred Date
+                                    *</label>
+                                <input type="date" class="form-control"
+                                    style="padding: 12px 15px; border-radius: 5px; border: 1px solid #444; color: rgb(0, 0, 0);"
+                                    required>
+                            </div>
+                            <div class="col-lg-6">
+                                <label class="text-white mb-10 d-block" style="font-weight: 500;">Preferred Time
+                                    *</label>
+                                <select class="form-control"
+                                    style="padding: 12px 15px; border-radius: 5px; border: 1px solid #444; color: rgb(0, 0, 0);"
+                                    required>
+                                    <option value="">Select time</option>
+                                    <option value="11:00">11:00 AM</option>
+                                    <option value="11:30">11:30 AM</option>
+                                    <option value="12:00">12:00 PM</option>
+                                    <option value="12:30">12:30 PM</option>
+                                    <option value="5:00">5:00 PM</option>
+                                    <option value="5:30">5:30 PM</option>
+                                    <option value="6:00">6:00 PM</option>
+                                    <option value="6:30">6:30 PM</option>
+                                    <option value="7:00">7:00 PM</option>
+                                    <option value="7:30">7:30 PM</option>
+                                    <option value="8:00">8:00 PM</option>
+                                </select>
+                            </div>
+                        </div> -->
+
+                        <!-- <div class="row mb-25">
+                            <div class="col-lg-12">
+                                <label class="text-white mb-10 d-block" style="font-weight: 500;">Experience Package
+                                    *</label>
+                                <select class="form-control"
+                                    style="padding: 12px 15px; border-radius: 5px; border: 1px solid #444; color: rgb(0, 0, 0);"
+                                    required>
+                                    <option value="">Select experience</option>
+                                    <option value="coffee">Intimate Coffee Date - $45/person</option>
+                                    <option value="dinner">Romantic Dinner - $95/person</option>
+                                    <option value="beer">Beer & Tapas Evening - $65/person</option>
+                                </select>
+                            </div>
+                        </div> -->
+
+
+
+                        <button type="submit" class="w-100 py-3 rounded-2"
+                            style="background: linear-gradient(135deg, #d4893f, #c97a35); color: white; border: none; font-weight: 600; font-size: 16px; transition: all 0.3s ease; cursor: pointer;"
+                            onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 8px 20px rgba(212, 140, 64, 0.3)'"
+                            onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'">
+                            Request Reservation
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Booking Section End -->
+
 
     <!-- Feature Section Start -->
     <!-- <div class="bg-mild pt-130 pb-100">
