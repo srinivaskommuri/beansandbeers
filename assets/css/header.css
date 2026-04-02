@@ -379,12 +379,12 @@
 }
 
 .navbar-area.style-two .navbar .navbar-nav .nav-item .dropdown-menu {
-  background-color: var(--secondaryColor);
+  background-color: #fffaf2;
 }
 
 .navbar-area.style-two .navbar .navbar-nav .nav-item .dropdown-menu .nav-item .nav-link {
-  color: var(--whiteColor);
-  border-color: rgba(255, 255, 255, 0.09);
+  color: #000;
+  border-color: rgba(18, 18, 18, 0.09)
 }
 
 .navbar-area.style-two .navbar .navbar-nav .nav-item .dropdown-menu .nav-item .nav-link:hover, .navbar-area.style-two .navbar .navbar-nav .nav-item .dropdown-menu .nav-item .nav-link.active {
