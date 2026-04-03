@@ -1,12 +1,12 @@
-(function() {
-	"use strict";
+(function () {
+    "use strict";
 
     //Preloader
-    window.addEventListener('load',function(){
-        document.querySelector('body').classList.add("loaded")  
+    window.addEventListener('load', function () {
+        document.querySelector('body').classList.add("loaded")
     });
 
-    window.onload = function(){
+    window.onload = function () {
 
         //Header Sticky
         const getHeaderId = document.querySelector(".navbar-area");
@@ -17,7 +17,7 @@
                 document.querySelector('#navbar').classList.toggle('sticky', scrollTop >= height);
             });
         }
-        
+
         // Back to Top
         const getId = document.getElementById("backtotop");
         if (getId) {
@@ -43,8 +43,8 @@
         autoHeight: true,
         fadeEffect: { crossFade: true },
         virtualTranslate: true,
-        effect:"fade",
-        speed:1400,
+        effect: "fade",
+        speed: 1400,
         navigation: {
             nextEl: ".next-btn",
             prevEl: ".prev-btn",
@@ -57,12 +57,12 @@
         autoHeight: true,
         fadeEffect: { crossFade: true },
         virtualTranslate: true,
-        effect:"fade",
+        effect: "fade",
         navigation: {
             nextEl: ".next-btn",
             prevEl: ".prev-btn",
         },
-        speed:1400,
+        speed: 1400,
     });
 
     //Promo-slider 
@@ -71,13 +71,13 @@
         grabCursor: true,
         loop: true,
         autoHeight: true,
-        speed:1400,
+        speed: 1400,
         breakpoints: {
             0: {
-              slidesPerView: 1
+                slidesPerView: 1
             },
             768: {
-              slidesPerView: 1.8
+                slidesPerView: 1.8
             },
             992: {
                 slidesPerView: 1.2
@@ -104,13 +104,13 @@
             nextEl: ".next-btn",
             prevEl: ".prev-btn",
         },
-        speed:1400,
+        speed: 1400,
         breakpoints: {
             0: {
-              slidesPerView: 1
+                slidesPerView: 1
             },
             768: {
-              slidesPerView: 2
+                slidesPerView: 2
             },
             992: {
                 slidesPerView: 3
@@ -121,36 +121,36 @@
             }
         },
     });
-    
+
     // Counter Js
     if ("IntersectionObserver" in window) {
         let counterObserver = new IntersectionObserver(function (entries, observer) {
             entries.forEach(function (entry) {
                 if (entry.isIntersecting) {
-                let counter = entry.target;
-                let target = parseInt(counter.innerText);
-                let step = target / 200;
-                let current = 0;
-                let timer = setInterval(function () {
-                    current += step;
-                    counter.innerText = Math.floor(current);
-                    if (parseInt(counter.innerText) >= target) {
-                    clearInterval(timer);
-                    }
-                }, 10);
-                counterObserver.unobserve(counter);
+                    let counter = entry.target;
+                    let target = parseInt(counter.innerText);
+                    let step = target / 200;
+                    let current = 0;
+                    let timer = setInterval(function () {
+                        current += step;
+                        counter.innerText = Math.floor(current);
+                        if (parseInt(counter.innerText) >= target) {
+                            clearInterval(timer);
+                        }
+                    }, 10);
+                    counterObserver.unobserve(counter);
                 }
             });
         });
         let counters = document.querySelectorAll(".counter");
-            counters.forEach(function (counter) {
+        counters.forEach(function (counter) {
             counterObserver.observe(counter);
         });
     }
 
     // Quantity Counter
     var resultEl = document.querySelector(".resultSet"),
-    plusMinusWidgets = document.querySelectorAll(".v-counter");
+        plusMinusWidgets = document.querySelectorAll(".v-counter");
     for (var i = 0; i < plusMinusWidgets.length; i++) {
         plusMinusWidgets[i].querySelector(".minusBtn").addEventListener("click", clickHandler);
         plusMinusWidgets[i].querySelector(".plusBtn").addEventListener("click", clickHandler);
@@ -159,13 +159,13 @@
         // reference to the count input field
         var countEl = event.target.parentNode.querySelector(".count");
         if (event.target.className.match(/\bminusBtn\b/)) {
-             countEl.value = Number(countEl.value) - 1;
+            countEl.value = Number(countEl.value) - 1;
         } else if (event.target.className.match(/\bplusBtn\b/)) {
-             countEl.value = Number(countEl.value) + 1;
+            countEl.value = Number(countEl.value) + 1;
         }
         triggerEvent(countEl, "change");
     };
-    function triggerEvent(el, type){
+    function triggerEvent(el, type) {
         if ('createEvent' in document) {
             // modern browsers, IE9+
             var e = document.createEvent('HTMLEvents');
@@ -175,11 +175,11 @@
             // IE 8
             var e = document.createEventObject();
             e.eventType = type;
-            el.fireEvent('on'+e.eventType, e);
+            el.fireEvent('on' + e.eventType, e);
         }
     }
-    function triggerEvent(el, type){
-        if('createEvent' in document) {
+    function triggerEvent(el, type) {
+        if ('createEvent' in document) {
             // modern browsers, IE9+
             var e = document.createEvent('HTMLEvents');
             e.initEvent(type, false, true);
@@ -188,78 +188,87 @@
             // IE 8
             var e = document.createEventObject();
             e.eventType = type;
-            el.fireEvent('on'+e.eventType, e);
+            el.fireEvent('on' + e.eventType, e);
         }
     }
-    
+
     // Scrollcue
     scrollCue.init();
 
 })();
- 
-    // Offcanvas Responsive Menu
-    const list = document.querySelectorAll('.responsive-menu-list');
-    function accordion(e) {
-        e.stopPropagation(); 
-        if(this.classList.contains('active')){
-            this.classList.remove('active');
-        }
-        else if(this.parentElement.parentElement.classList.contains('active')){
-            this.classList.add('active');
-        }
-        else {
-            for(i=0; i < list.length; i++){
-                list[i].classList.remove('active');
-            }
-            this.classList.add('active');
-        }
+
+// Offcanvas Responsive Menu
+const list = document.querySelectorAll('.responsive-menu-list');
+function accordion(e) {
+    e.stopPropagation();
+    if (this.classList.contains('active')) {
+        this.classList.remove('active');
     }
-    for(i = 0; i < list.length; i++ ){
-        list[i].addEventListener('click', accordion);
+    else if (this.parentElement.parentElement.classList.contains('active')) {
+        this.classList.add('active');
     }
+    else {
+        for (i = 0; i < list.length; i++) {
+            list[i].classList.remove('active');
+        }
+        this.classList.add('active');
+    }
+}
+for (i = 0; i < list.length; i++) {
+    list[i].addEventListener('click', accordion);
+}
 
 try {
 
     // function to set a given theme/color-scheme
-	function setTheme(themeName) {
-		localStorage.setItem('etar_theme', themeName);
-		document.documentElement.className = themeName;
-	}
-	// function to toggle between light and dark theme
-	// function toggleTheme() {
-	// 	if (localStorage.getItem('etar_theme') === 'theme-dark') {
-	// 		setTheme('theme-light');
-	// 	} else {
-	// 		setTheme('theme-dark');
-	// 	}
-	// }
-	// Immediately invoked function to set the theme on initial load
-	(function () {
-		if (localStorage.getItem('etar_theme') === 'theme-dark') {
-			setTheme('theme-dark');
-			document.querySelector('.slider-btn').checked = false;
-		} else {
-			setTheme('theme-light');
-		document.querySelector('.slider-btn').checked = true;
-		}
-	})();
+    function setTheme(themeName) {
+        localStorage.setItem('etar_theme', themeName);
+        document.documentElement.className = themeName;
+    }
+    // function to toggle between light and dark theme
+    // function toggleTheme() {
+    // 	if (localStorage.getItem('etar_theme') === 'theme-dark') {
+    // 		setTheme('theme-light');
+    // 	} else {
+    // 		setTheme('theme-dark');
+    // 	}
+    // }
+    // Immediately invoked function to set the theme on initial load
+    (function () {
+        if (localStorage.getItem('etar_theme') === 'theme-dark') {
+            setTheme('theme-dark');
+            document.querySelector('.slider-btn').checked = false;
+        } else {
+            setTheme('theme-light');
+            document.querySelector('.slider-btn').checked = true;
+        }
+    })();
 
-} catch (err) {}
+} catch (err) { }
+
+//seven rooms
+SevenroomsWidget.init({
+    venueId: "beansandbeerstorquay",
+    triggerId: "sr-res-root", // id of the dom element that will trigger this widget
+    type: "reservations", // either 'reservations' or 'waitlist' or 'events'
+    styleButton: false, // true if you are using the SevenRooms button
+    clientToken: "" //(Optional) Pass the api generated clientTokenId here
+})
 
 // Adjust Instagram feed a elements
 function adjustInstagramLinks() {
     // Show post links
-    document.querySelectorAll('.eapps-instagram-feed .eapps-instagram-feed-posts-item-link').forEach(function(a) {
+    document.querySelectorAll('.eapps-instagram-feed .eapps-instagram-feed-posts-item-link').forEach(function (a) {
         a.style.setProperty('display', 'block', 'important');
     });
 
     // Hide watermark
-    document.querySelectorAll('.eapps-instagram-feed a[href*="elfsight.com"]').forEach(function(a) {
+    document.querySelectorAll('.eapps-instagram-feed a[href*="elfsight.com"]').forEach(function (a) {
         a.style.setProperty('display', 'none', 'important');
     });
 
     // Hide watermark
-    document.querySelectorAll('.es-widget-background-wrapper a[href*="elfsight.com"]').forEach(function(a) {
+    document.querySelectorAll('.es-widget-background-wrapper a[href*="elfsight.com"]').forEach(function (a) {
         a.style.setProperty('display', 'none', 'important');
     });
 
@@ -275,8 +284,8 @@ setTimeout(adjustInstagramLinks, 2000);
 setTimeout(adjustInstagramLinks, 3000);
 
 // Use MutationObserver to watch for changes on the body
-const observer = new MutationObserver(function(mutations) {
-    mutations.forEach(function(mutation) {
+const observer = new MutationObserver(function (mutations) {
+    mutations.forEach(function (mutation) {
         if (mutation.type === 'childList') {
             adjustInstagramLinks();
         }

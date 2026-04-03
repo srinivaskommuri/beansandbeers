@@ -85,6 +85,9 @@
                                     <li class="nav-item">
                                         <a href="cocktails.html" class="nav-link" bis_skin_checked="1">Cocktails </a>
                                     </li>
+                                    <li class="nav-item">
+                                        <a href="drinks.html" class="nav-link" bis_skin_checked="1">Drinks </a>
+                                    </li>
                                 </ul>
                             </li>
                             <li class="nav-item">
@@ -143,7 +146,8 @@
                         <li><a href="lunch-and-dinner.html">Lunch & Dinner</a></li>
                         <li><a href="kids-menu.html">Kids Menu</a></li>
                         <li><a href="sides.html">Sides</a></li>
-                        <li><a href="">Cocktails</a></li>
+                        <li><a href="cocktails.html">Cocktails</a></li>
+                        <li><a href="drinks.html">Drinks</a></li>
                     </ul>
                 </li>
                 <li><a href="book-a-date-night.html">Book a Date Night</a></li>
@@ -221,12 +225,12 @@
                         <p class="fs-xxl-18 mb-5">From carefully curated menus to our selection of craft beers and
                             premium wines, every detail is thoughtfully planned to make your evening magical and
                             romantic.</p>
-                        <div id="sr-res-root" class="sr-sm sr-dark sr-#324654 reserve-your-table mt-4 text-center"
+                        <!-- <div id="sr-res-root" class="sr-sm sr-dark sr-#324654 reserve-your-table mt-4 text-center"
                             style="background-color: #d4893f; color: white; padding: 15px 30px; border-radius: 25px; font-size: 18px; font-weight: bold; box-shadow: 0 5px 15px rgba(0,0,0,0.3); cursor: pointer; transition: all 0.3s ease; display: inline-block; text-align: center;"
                             onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 8px 25px rgba(0,0,0,0.4)'"
                             onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 5px 15px rgba(0,0,0,0.3)'">
                             Reserve Your
-                            Table Now</div>
+                            Table Now</div> -->
                     </div>
                 </div>
             </div>
@@ -429,11 +433,6 @@
         <div class="footer-top">
             <div class="container">
                 <div class="row align-items-center">
-                    <!-- <div class="col-xxl-5 offset-xxl-1 col-xl-6 col-lg-7 col-md-8 ps-xxl-4">
-                        <a href="index.html" class="logo">
-                            <img src="assets/images/logo/logo.webp" alt="Logo">
-                        </a>
-                    </div> -->
                     <div class="col-xxl-6 col-xl-6 col-lg-5 col-md-4">
                         <div class="footer-widget">
                             <h2 class="text-white mb-20">Contact Us</h2>
@@ -445,26 +444,6 @@
         </div>
         <div class="container">
             <div class="footer-widget-wrapper d-flex flex-wrap pb-30">
-                <!-- <div class="footer-widget position-relative mb-30">
-                    <h3 class="footer-widget-title fw-semibold text-white">Quick Link</h3>
-                    <ul class="footer-menu list-unstyle">
-                        <li><a href="#">View Account</a></li>
-                        <li><a href="#">Track Your Order</a></li>
-                        <li><a href="#">Offer</a></li>
-                        <li><a href="#">Promotions</a></li>
-                        <li><a href="#">Customer Reviews</a></li>
-                    </ul>
-                </div>
-                <div class="footer-widget position-relative mb-30">
-                    <h3 class="footer-widget-title fw-semibold text-white">Company Link</h3>
-                    <ul class="footer-menu list-unstyle">
-                        <li><a href="#">About Us</a></li>
-                        <li><a href="#">Menu</a></li>
-                        <li><a href="#">Book a Date Night</a></li>
-                        <li><a href="functions.html">Functions</a></li>
-                        <li><a href="#">Terms & Conditions</a></li>
-                    </ul>
-                </div> -->
                 <div class="footer-widget position-relative mb-30">
                     <h3 class="footer-widget-title fw-semibold text-white">Working Hours</h3>
                     <ul class="working-hours list-unstyle">
@@ -535,6 +514,12 @@
     </footer>
     <!-- Footer End -->
 
+    <!-- Floating Book a Table Button -->
+    <a href="javascript:void(0)" id="sr-res-root"
+        class="bookTableBtn position-fixed d-flex align-items-center justify-content-center sr-sm sr-dark sr-#324654">
+        <img src="assets/images/icons/floating-book-a-table.png" alt="" class="w-100" />
+    </a>
+
     <!-- Back to Top -->
     <button type="button" id="backtotop" class="position-fixed text-center border-0 p-0">
         <i class="ri-arrow-up-line"></i>
@@ -542,23 +527,12 @@
 
     <!-- Link of JS files -->
     <!-- <script data-cfasync="false" src="../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script> -->
+    <script src="https://www.sevenrooms.com/widget/embed.js"></script>
     <script src="assets/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/swiper-bundle.min.js"></script>
     <script src="assets/js/fslightbox.js"></script>
     <script src="assets/js/scrollcue.min.js"></script>
     <script src="assets/js/main.js"></script>
-    <script src="https://www.sevenrooms.com/widget/embed.js"></script>
-
-    <script>
-        SevenroomsWidget.init({
-            venueId: "beansandbeerstorquay",
-            triggerId: "sr-res-root", // id of the dom element that will trigger this widget
-            type: "reservations", // either 'reservations' or 'waitlist' or 'events'
-            styleButton: true, // true if you are using the SevenRooms button
-            clientToken: "" //(Optional) Pass the api generated clientTokenId here
-        })
-
-    </script>
 </body>
 
 </html>

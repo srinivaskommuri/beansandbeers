@@ -86,6 +86,9 @@
                                     <li class="nav-item">
                                         <a href="cocktails.html" class="nav-link" bis_skin_checked="1">Cocktails </a>
                                     </li>
+                                    <li class="nav-item">
+                                        <a href="drinks.html" class="nav-link" bis_skin_checked="1">Drinks </a>
+                                    </li>
                                 </ul>
                             </li>
                             <li class="nav-item">
@@ -144,7 +147,8 @@
                         <li><a href="lunch-and-dinner.html">Lunch & Dinner</a></li>
                         <li><a href="kids-menu.html">Kids Menu</a></li>
                         <li><a href="sides.html">Sides</a></li>
-                        <li><a href="">Cocktails</a></li>
+                        <li><a href="cocktails.html">Cocktails</a></li>
+                        <li><a href="drinks.html">Drinks</a></li>
                     </ul>
                 </li>
                 <li><a href="book-a-date-night.html">Book a Date Night</a></li>
@@ -546,7 +550,7 @@
     <!-- Recipe Section End -->
 
     <!-- Reservation Start -->
-    <div class="reservation-wrap style-two bg-aqua position-relative index-1">
+    <div id="reservationSection" class="reservation-wrap style-two bg-aqua position-relative index-1">
         <div class="container">
             <div class="row align-items-center gx-lg-0">
                 <div class="col-xxl-12 col-lg-12" data-cue="slideInUp">
@@ -717,18 +721,26 @@
     </footer>
     <!-- Footer End -->
 
+    <!-- Floating Book a Table Button -->
+    <a href="javascript:void(0)" id="sr-res-root"
+        class="bookTableBtn position-fixed d-flex align-items-center justify-content-center sr-sm sr-dark sr-#324654">
+        <img src="assets/images/icons/floating-book-a-table.png" alt="" class="w-100" />
+    </a>
+
     <!-- Back to Top -->
     <button type="button" id="backtotop" class="position-fixed text-center border-0 p-0">
         <i class="ri-arrow-up-line"></i>
     </button>
 
     <!-- Link of JS files -->
+    <script src="https://www.sevenrooms.com/widget/embed.js"></script>
     <script src="assets/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/swiper-bundle.min.js"></script>
     <script src="assets/js/fslightbox.js"></script>
     <script src="assets/js/scrollcue.min.js"></script>
     <script src="assets/js/main.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
     <script>
         AOS.init({
             easing: 'ease-out-back',

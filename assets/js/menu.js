@@ -16,6 +16,20 @@ document.addEventListener('DOMContentLoaded', () => {
             0% { background-position: -200% 0; }
             100% { background-position: 200% 0; }
         }
+        .category-heading {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-top: 30px;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #6f4e37;
+            padding-bottom: 10px;
+        }
+        .menu-row {
+            gap: 0px;
+        }
+        .menu-col {
+            margin-bottom: 20px;
+        }
     `;
     document.head.appendChild(style);
 
@@ -29,8 +43,8 @@ document.addEventListener('DOMContentLoaded', () => {
             return res.json();
         })
         .then((data) => {
-            const filteredData = data.filter(getCategoryFilter());
-            renderMenu(filteredData, container);
+            const pageCategories = getPageCategories();
+            renderMenu(data, container, pageCategories);
         })
         .catch((err) => {
             console.error('Failed to load menu data:', err);
@@ -39,33 +53,52 @@ document.addEventListener('DOMContentLoaded', () => {
         });
 });
 
-function getCategoryFilter() {
+function getPageCategories() {
     const path = window.location.pathname.toLowerCase();
 
     if (path.includes('breakfast')) {
-        return item => item.product_category_id === 287360;
+        return [
+            { name: 'Breakfast', ids: [287360] }
+        ];
     } else if (path.includes('vegan-menu')) {
-        const veganMenu = item => {
-            const isVeganCategory = item.product_category_id === 287361;
-            const isSpecificVeganItem = item.product_category_id === 284955 && item.id === 1481628;
-            return isVeganCategory || isSpecificVeganItem;
-        };
-        return veganMenu;
+        return [
+            { name: 'Vegan Menu', ids: [287361, 284955] }
+        ];
     } else if (path.includes('lunch-and-dinner')) {
-        // Lunch and Dinner categories: BnB Mains, Burgers, Ribs, Salads
-        const categories = [284954, 284955, 287366, 287367];
-        return item => categories.includes(item.product_category_id);
+        return [
+            { name: 'BnB Mains', ids: [284954] },
+            { name: 'Burgers', ids: [284955] },
+            { name: 'Ribs', ids: [287366] },
+            { name: 'Salads', ids: [287367] }
+        ];
     } else if (path.includes('kids-menu')) {
-        // Kids Menu categories: BnB Mains, Burgers, Ribs, Salads
-        const categories = [287365, 284962];
-        return item => categories.includes(item.product_category_id);
+        return [
+            { name: 'Kids Mains', ids: [287365] },
+            { name: 'Kids Burgers', ids: [284962] }
+        ];
     } else if (path.includes('sides')) {
-        // Sides categories
-        const categories = [284965, 284959];
-        return item => categories.includes(item.product_category_id);
+        return [
+            { name: 'Sides', ids: [284965, 284959] }
+        ];
+    } else if (path.includes('cocktails')) {
+        return [
+            { name: 'Beers on Tap', ids: [284952] },
+            { name: 'Fridge', ids: [284953] },
+            { name: 'Spirits', ids: [284966] },
+            { name: 'Wines', ids: [284967] },
+            { name: 'Mocktails', ids: [284964] }
+        ];
+    } else if (path.includes('drinks')) {
+        return [
+            { name: 'Coffee', ids: [284957] },
+            { name: 'Cool Sips', ids: [284958] },
+            { name: 'Juices', ids: [284963] },
+        ];
     } else {
         // Default: show all items if on other pages
-        return () => true;
+        return [
+            { name: 'All Items', ids: [] }
+        ];
     }
 }
 
@@ -73,7 +106,7 @@ function renderShimmer(container) {
     container.innerHTML = '';
     for (let i = 0; i < 8; i++) { // Show 8 placeholder cards
         const col = document.createElement('div');
-        col.className = 'col-md-3';
+        col.className = 'col-md-3 menu-col';
 
         col.innerHTML = `
             <div class="card h-100 shadow-sm">
@@ -91,28 +124,67 @@ function renderShimmer(container) {
     }
 }
 
-function renderMenu(items, container) {
-    console.log('Rendering menu items:', items);
+function renderMenu(allItems, container, pageCategories) {
+    console.log('Rendering menu items:', allItems);
     container.innerHTML = ''; // Clear shimmer placeholders
-    items.forEach((item) => {
-        const col = document.createElement('div');
-        col.className = 'col-md-3';
 
-        col.innerHTML = `
-            <div class="card h-100 shadow-sm">
-                <img src="${item.image_thumb_url || 'assets/images/services/burger.jpg'}" class="card-img-top" alt="${item.product_name}">
-                <div class="card-body d-flex flex-column">
-                    <h5 class="card-title">${item.product_name}</h5>
-                    <p class="card-text">${item.product_desc || ''}</p>
-                    <p class="card-text menu-price text-primary fw-bold mt-auto">${item.price === 0 ? `From $${item.price_min.toFixed(2)}` : `$${item.price.toFixed(2)}`}</p>
-                </div>
-            </div>
-        `;
+    const wrapper = document.createElement('div');
+    wrapper.className = 'row';
 
-        container.appendChild(col);
+    pageCategories.forEach((category) => {
+        // Filter items for this category
+        const categoryItems = allItems.filter(item =>
+            category.ids.length === 0 ? true : category.ids.includes(item.product_category_id)
+        );
+
+        if (categoryItems.length > 0) {
+            // Create category heading
+            const headingRow = document.createElement('div');
+            headingRow.className = 'row w-100';
+            headingRow.style.marginLeft = '0';
+            headingRow.style.marginRight = '0';
+
+            const headingCol = document.createElement('div');
+            headingCol.className = 'col-12';
+            const heading = document.createElement('h3');
+            heading.className = 'category-heading';
+            heading.textContent = category.name;
+
+            headingCol.appendChild(heading);
+            headingRow.appendChild(headingCol);
+            wrapper.appendChild(headingRow);
+
+            // Create items row
+            const itemsRow = document.createElement('div');
+            itemsRow.className = 'row w-100 menu-row';
+            itemsRow.style.marginLeft = '0';
+            itemsRow.style.marginRight = '0';
+
+            categoryItems.forEach((item) => {
+                const col = document.createElement('div');
+                col.className = 'col-md-3 menu-col';
+
+                col.innerHTML = `
+                    <div class="card h-100 shadow-sm">
+                        <img src="${item.image_thumb_url || 'assets/images/services/burger.jpg'}" class="card-img-top" alt="${item.product_name}">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">${item.product_name}</h5>
+                            <p class="card-text">${item.product_desc || ''}</p>
+                            <p class="card-text menu-price text-primary fw-bold mt-auto">${item.price === 0 ? `From $${item.price_min.toFixed(2)}` : `$${item.price.toFixed(2)}`}</p>
+                        </div>
+                    </div>
+                `;
+
+                itemsRow.appendChild(col);
+            });
+
+            wrapper.appendChild(itemsRow);
+        }
     });
 
-    // attach event listeners to any existing add-cart buttons (in case items were injected previously)
+    container.appendChild(wrapper);
+
+    // attach event listeners to any existing add-cart buttons
     container.addEventListener('click', (evt) => {
         if (evt.target && evt.target.classList.contains('add-cart')) {
             const card = evt.target.closest('.card');
