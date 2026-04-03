@@ -104,7 +104,7 @@ function renderMenu(items, container) {
                 <div class="card-body d-flex flex-column">
                     <h5 class="card-title">${item.product_name}</h5>
                     <p class="card-text">${item.product_desc || ''}</p>
-                    <p class="card-text menu-price text-primary fw-bold mt-auto">${`$${item.price.toFixed(2)}`}</p>
+                    <p class="card-text menu-price text-primary fw-bold mt-auto">${item.price === 0 ? `From $${item.price_min.toFixed(2)}` : `$${item.price.toFixed(2)}`}</p>
                 </div>
             </div>
         `;
