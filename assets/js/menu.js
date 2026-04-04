@@ -62,7 +62,7 @@ function getPageCategories() {
         ];
     } else if (path.includes('vegan-menu')) {
         return [
-            { name: 'Vegan Menu', ids: [287361, 284955] }
+            { name: 'Vegan Menu', ids: [287361] }
         ];
     } else if (path.includes('lunch-and-dinner')) {
         return [
